@@ -14,7 +14,12 @@ used.
 ## Example usage
 
 ```yaml
-on: [pull_request_review]
+on:
+  pull_request_review:
+    branches:
+      - main
+    types:
+      - submitted
 
 jobs:
   approved:
