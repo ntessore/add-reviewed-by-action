@@ -1,0 +1,24 @@
+{
+  "name": "add-reviewed-by-action",
+  "version": "1.0.0",
+  "description": "GitHub action to add a `Reviewed-by` trailer to a pull request description when the pull request is reviewed and accepted.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @vercel/ncc build index.js --license licenses.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glass-dev/add-reviewed-by-action.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/glass-dev/add-reviewed-by-action/issues"
+  },
+  "homepage": "https://github.com/glass-dev/add-reviewed-by-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}

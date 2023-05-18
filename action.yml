@@ -1,0 +1,12 @@
+name: 'Add Reviewed-by'
+description: >
+  Add a `Reviewed-by` trailer to a pull request description when the pull
+  request is reviewed and accepted.
+inputs:
+  github-token:
+    description: The GitHub token used to create an authenticated client
+    default: ${{ github.token }}
+    required: false
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
