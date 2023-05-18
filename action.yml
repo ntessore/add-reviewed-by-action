@@ -2,6 +2,9 @@ name: 'Add Reviewed-by'
 description: >
   Add a `Reviewed-by` trailer to a pull request description when the pull
   request is reviewed and accepted.
+branding:
+  icon: 'check'
+  color: 'green'
 inputs:
   github-token:
     description: The GitHub token used to create an authenticated client

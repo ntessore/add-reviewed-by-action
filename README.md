@@ -1,4 +1,4 @@
-# GitHub action to add `Reviewed-by`
+# GitHub action to add a `Reviewed-by` trailer
 
 This action adds a `Reviewed-by` trailer to a pull request description when
 there is an approving review.
@@ -14,16 +14,12 @@ used.
 ## Example usage
 
 ```yaml
-on:
-  pull_request_review:
-    types: [submitted]
+on: [pull_request_review]
 
 jobs:
   approved:
-    name: Review approved
     if: github.event.review.state == 'approved'
     runs-on: ubuntu-latest
     steps:
-      - name: Add Reviewed-By
-        uses: ntessore/add-reviewed-by-action@v1
+      - uses: ntessore/add-reviewed-by-action@v1
 ```

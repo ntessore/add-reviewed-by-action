@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/glass-dev/add-reviewed-by-action.git"
+    "url": "git+https://github.com/ntessore/add-reviewed-by-action.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/glass-dev/add-reviewed-by-action/issues"
+    "url": "https://github.com/ntessore/add-reviewed-by-action/issues"
   },
-  "homepage": "https://github.com/glass-dev/add-reviewed-by-action#readme",
+  "homepage": "https://github.com/ntessore/add-reviewed-by-action#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1"
