@@ -7,12 +7,27 @@ async function run() {
     const octokit = github.getOctokit(token);
 
     const context = github.context;
-    const user = context.payload.review.user.login;
+    const username = context.payload.review.user.login;
     const body = context.payload.pull_request.body;
+
+    const {data: user} = await octokit.rest.users.getByUsername({
+        username,
+    });
+
+    var reviewer;
+    if (user.name) {
+        if (user.email) {
+            reviewer = `${user.name} <${user.email}>`;
+        } else {
+            reviewer = `${user.name}`;
+        }
+    } else {
+        reviewer = `${username}`;
+    }
 
     const bodyWithNewline = body.endsWith('\n') ? body : body + '\n';
 
-    const reviewedBy = `Reviewed-by: @${user}`;
+    const reviewedBy = `Reviewed-by: ${reviewer}`;
 
     console.log(reviewedBy);
 
