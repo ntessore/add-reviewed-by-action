@@ -8,7 +8,7 @@ async function run() {
 
     const context = github.context;
     const username = context.payload.review.user.login;
-    const body = context.payload.pull_request.body;
+    const body = context.payload.pull_request.body ?? "";
 
     const {data: user} = await octokit.rest.users.getByUsername({
         username,
